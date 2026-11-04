@@ -1,0 +1,241 @@
+.pi-panel,
+.pi-drawer,
+.pi-launcher {
+  --pi-ink: #14233c;
+  --pi-muted: #5f6b7c;
+  --pi-line: #d9dfe7;
+  --pi-surface: #ffffff;
+  --pi-accent: #14233c;
+  --pi-high-bg: #d6f5e3;
+  --pi-high-ink: #0b5c33;
+  --pi-mid-bg: #eef1f5;
+  --pi-mid-ink: #38465a;
+  --pi-low-bg: #fde3e1;
+  --pi-low-ink: #8f1d17;
+  box-sizing: border-box;
+  color: var(--pi-ink);
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.pi-panel *,
+.pi-drawer * {
+  box-sizing: border-box;
+}
+
+.pi-panel {
+  background: var(--pi-surface);
+  border-top: 1px solid var(--pi-line);
+  padding: 8px 10px 10px;
+}
+
+.pi-panel--detail {
+  border: 1px solid var(--pi-line);
+  border-radius: 8px;
+  margin: 10px 0;
+  max-width: 420px;
+}
+
+.pi-headline {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.pi-value {
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  padding: 1px 6px;
+}
+
+.pi-value--high { background: var(--pi-high-bg); color: var(--pi-high-ink); }
+.pi-value--mid { background: var(--pi-mid-bg); color: var(--pi-mid-ink); }
+.pi-value--low { background: var(--pi-low-bg); color: var(--pi-low-ink); }
+
+.pi-unit,
+.pi-basis,
+.pi-muted {
+  color: var(--pi-muted);
+}
+
+.pi-basis {
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.pi-actions,
+.pi-editor {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin-top: 6px;
+}
+
+.pi-link {
+  color: #0b57d0;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+.pi-button {
+  background: var(--pi-surface);
+  border: 1px solid var(--pi-line);
+  border-radius: 4px;
+  color: var(--pi-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  padding: 2px 8px;
+}
+
+.pi-button:hover {
+  border-color: var(--pi-ink);
+}
+
+.pi-button--primary {
+  background: var(--pi-accent);
+  border-color: var(--pi-accent);
+  color: #ffffff;
+}
+
+.pi-input {
+  border: 1px solid var(--pi-line);
+  border-radius: 4px;
+  color: var(--pi-ink);
+  flex: 1 1 100%;
+  font: inherit;
+  min-width: 0;
+  padding: 3px 6px;
+}
+
+.pi-error {
+  color: var(--pi-low-ink);
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.pi-error:empty {
+  display: none;
+}
+
+.pi-link:focus-visible,
+.pi-button:focus-visible,
+.pi-row-name:focus-visible,
+.pi-launcher:focus-visible,
+.pi-input:focus-visible {
+  outline: 2px solid #0b57d0;
+  outline-offset: 1px;
+}
+
+.smartbuy-card.pi-flash {
+  outline: 3px solid #0b57d0;
+  outline-offset: 2px;
+}
+
+.pi-launcher {
+  background: var(--pi-accent);
+  border: 0;
+  border-radius: 999px;
+  bottom: 72px;
+  box-shadow: 0 4px 14px rgba(20, 35, 60, 0.3);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  position: fixed;
+  right: 16px;
+  z-index: 2147483000;
+}
+
+.pi-launcher[hidden],
+.pi-drawer[hidden],
+.pi-load-all[hidden] {
+  display: none;
+}
+
+.pi-drawer {
+  background: var(--pi-surface);
+  box-shadow: -6px 0 24px rgba(20, 35, 60, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 100vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 460px;
+  z-index: 2147483001;
+}
+
+.pi-drawer-header,
+.pi-drawer-tools {
+  align-items: center;
+  border-bottom: 1px solid var(--pi-line);
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 10px 12px;
+}
+
+.pi-drawer-header strong {
+  font-size: 14px;
+}
+
+.pi-table-wrap {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.pi-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pi-table th {
+  background: var(--pi-surface);
+  border-bottom: 1px solid var(--pi-line);
+  color: var(--pi-muted);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px;
+  position: sticky;
+  text-align: left;
+  top: 0;
+  white-space: nowrap;
+}
+
+.pi-table td {
+  border-bottom: 1px solid var(--pi-line);
+  padding: 6px;
+  vertical-align: top;
+}
+
+.pi-rank {
+  color: var(--pi-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.pi-num {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.pi-row-name {
+  background: none;
+  border: 0;
+  color: var(--pi-ink);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: left;
+}
+
+.pi-row-name:hover {
+  text-decoration: underline;
+}

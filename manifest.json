@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Points Insight",
+  "version": "0.1.0",
+  "description": "Shows S$ per 1,000 SmartPoints on the MoneySmart Rewards Store, with your own street prices and a ranked view.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.moneysmart.sg/store*"],
+      "js": ["src/core.js", "src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

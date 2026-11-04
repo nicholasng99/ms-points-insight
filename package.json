@@ -1,0 +1,9 @@
+{
+  "name": "points-insight",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension showing the value per SmartPoint in the MoneySmart Rewards Store",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\""
+  }
+}
